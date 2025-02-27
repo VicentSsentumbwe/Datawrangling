@@ -35,7 +35,7 @@ def puzzle_action(s):
     valid, message = is_valid_puzzle(puzzle)
 
     if valid:
-        sbg.set_beehive_letters(puzzle)  # ✅ Updates the beehive with the letters
+        sbg.set_beehive_letters(puzzle)  # Updates the beehive with the letters
         sbg.show_message(f"Puzzle updated: {puzzle}", "Green")
         found_words.clear()  # Reset words when puzzle changes
         global total_score, valid_words
@@ -110,7 +110,7 @@ def shuffle_action(s):
     random.shuffle(outer_letters)  # Shuffle outer letters
     shuffled_puzzle = center_letter + "".join(outer_letters)  # Reassemble
 
-    sbg.set_beehive_letters(shuffled_puzzle)  # ✅ Update beehive with shuffled letters
+    sbg.set_beehive_letters(shuffled_puzzle)  # Update beehive with shuffled letters
     sbg.show_message("Beehive letters shuffled!", "Blue")
 
 def hint_action(s):
@@ -149,8 +149,8 @@ def spelling_bee():
     sbg.add_field("Puzzle", puzzle_action)
     sbg.add_button("Solve", solve_action)
     sbg.add_field("Word", check_word_action)
-    sbg.add_button("Shuffle", shuffle_action)  # ✅ Add shuffle button
-    sbg.add_button("Hint", hint_action)  # ✅ Add hint button
+    sbg.add_button("Shuffle", shuffle_action)  # Add shuffle button
+    sbg.add_button("Hint", hint_action)  # Add hint button
 
 # Run the program
 if __name__ == "__main__":
